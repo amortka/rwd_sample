@@ -1,5 +1,4 @@
 /* 
-    Created on : 2014-09-11, 09:26:47
     Author     : adam
 */
 $break-small-ratio: 0.4;
@@ -12,11 +11,146 @@ $break-large-ratio: 0.8;
 $break-large-ratio-font: 1;
 
 @media (min-width: 0px) and (max-width: $break-small - 1) {
-     body {
+    $size-navigation-height: 50px;
+
+    body {
         font: {
-            size: 0.9em;
+            size: 0.3em;
         }
-    }   
+        margin-top: $size-navigation-height;
+        background-color: $color-navigation;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left:0; 
+        height: auto;
+        font: {
+            size: 1.8em;
+        }
+        overflow: visible;
+        h2 {
+            display: block;
+            height: $size-navigation-height;
+            line-height: $size-navigation-height;
+            z-index: 120;
+        }
+        ul {
+            z-index: 150;
+            display: none;
+            li {
+                display: block;
+                width: 100%;
+                line-height: $size-navigation-height;
+                margin-right: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                z-index: 150;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        #nav-toggle {
+            width: $size-navigation-height;
+            height: $size-navigation-height;
+            top: auto;
+            bottom: -$size-navigation-height;
+            padding: 15px 10px;
+            span:after {
+                border-bottom: 4px solid #FFF;
+                border-top: 12px double #FFF;
+                height: 4px;
+            }
+        }         
+        #nav-toggle {
+            display: block;
+        }        
+    }
+    header {
+        min-height: floor($size-header * $break-small-ratio);
+        .wrapper { //required to position inside elements in center of contener
+                   h2 {
+                       font: {
+                           size: $size-header-h2;
+                       }
+                       margin-bottom: $size-header-h2/10;
+
+                   }
+                   h3 {
+                       color: $color-header-light;//#a6d6df;
+                       font: {
+                           size: $size-header-h3;
+                       }
+
+                   }
+                   .arrow {
+                       bottom: -2em;
+                       font: {
+                           size: 0.5em;
+                       }
+                   }
+        }     
+    }
+    section {
+        $size-section-height: 110px;
+        height: $size-section-height;
+        .block {
+            //height: $size-section-height;
+            h4 {
+                line-height: $size-section-height; //$size-section-height;
+                font-size: 2.0em;
+            }                
+            .arrow {
+                line-height: $size-section-height;
+            }
+        }
+        &.high {
+            width: 100%;
+            float: left;
+            height: auto;
+            overflow: hidden;
+            .block {       
+                &.block-20, &.block-30, &.block-70, &.block-80 {
+                    width: 100%;
+                    float: left;
+                }
+                .arrow {
+                    line-height: $size-section-height;
+                }
+                ul {
+                    display: block;
+                    float: left;
+                    overflow: visible;
+                    width: 100%;
+                    li {
+                        display: block;
+                        float: left;
+                        width: 100%;
+                    }
+                }
+            }
+        } 
+    }
+    main {
+        float: left;
+        clear: left;
+        padding-top: 20px;
+        p {
+            font: {
+                size: 2em;
+            }
+            line-height: 2.5em;
+            -webkit-column-count: 1; //Chrome, Safari, Opera
+            -moz-column-count: 1; //Firefox */
+            column-count: 1;
+
+        }    
+    }
+    aside {
+        display: none;
+    }
     #media-step-4 {
         display: block;
     }
@@ -24,7 +158,7 @@ $break-large-ratio-font: 1;
 
 @media (min-width: $break-small) and (max-width: $break-medium - 1) {
     $size-navigation-height: 74px;
-    
+
     body {
         font: {
             size: 0.4em;
@@ -70,15 +204,15 @@ $break-large-ratio-font: 1;
             top: auto;
             bottom: -$size-navigation-height;
             padding: 25px 20px;
-             span:after {
+            span:after {
                 border-bottom: 5px solid #FFF;
                 border-top: 15px double #FFF;
                 height: 5px;
             }
         }         
-            #nav-toggle {
-                      display: block;
-            }        
+        #nav-toggle {
+            display: block;
+        }        
     }
     header {
         min-height: floor($size-header * $break-medium-ratio);
@@ -117,7 +251,7 @@ $break-large-ratio-font: 1;
                     width: 100%;
                     float: left;
                 }
-                
+
                 ul {
                     display: block;
                     float: left;
@@ -144,7 +278,7 @@ $break-large-ratio-font: 1;
             -webkit-column-count: 1; //Chrome, Safari, Opera
             -moz-column-count: 1; //Firefox */
             column-count: 1;
-          
+
         }    
     }
     aside {
@@ -156,7 +290,7 @@ $break-large-ratio-font: 1;
 }
 
 @media (min-width: $break-medium) and (max-width: $break-big - 1) {
-     body {
+    body {
         font: {
             size: 0.6em;
         }
@@ -216,7 +350,7 @@ $break-large-ratio-font: 1;
             }
         }    
     }
-    
+
     main {
         p {
             font: {
@@ -226,7 +360,7 @@ $break-large-ratio-font: 1;
             -webkit-column-count: 1; //Chrome, Safari, Opera
             -moz-column-count: 1; //Firefox */
             column-count: 1;
-          
+
         }    
     }
     aside {
@@ -238,7 +372,7 @@ $break-large-ratio-font: 1;
 }
 
 @media (min-width: $break-big) and (max-width: $break-large - 1) {
-     body {
+    body {
         font: {
             size: 0.9em;
         }
@@ -298,7 +432,7 @@ $break-large-ratio-font: 1;
             }
         }    
     }
-    
+
     main {
         p {
             font: {
