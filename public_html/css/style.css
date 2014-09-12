@@ -1,7 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
 /* 
-    Created on : 2014-09-11, 09:27:36
     Author     : adam
 */
 /* CONSTANTS */
@@ -235,16 +234,12 @@ main {
   background-color: #e74c3c; }
 
 /* 
-    Created on : 2014-09-11, 09:26:47
     Author     : adam
 */
 @media (min-width: 0px) and (max-width: 319px) {
   body {
-    font-size: 0.9em; }
-
-  #media-step-4 {
-    display: block; } }
-@media (min-width: 320px) and (max-width: 639px) {
+    font-size: 0.3em; } }
+@media (min-width: 0) and (max-width: 639px) {
   body {
     font-size: 0.4em;
     margin-top: 74px;
