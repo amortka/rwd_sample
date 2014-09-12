@@ -1,0 +1,318 @@
+/* 
+    Created on : 2014-09-11, 09:26:47
+    Author     : adam
+*/
+$break-small-ratio: 0.4;
+$break-small-ratio-font: 0.4;
+$break-medium-ratio: 0.4;
+$break-medium-ratio-font: 0.8;
+$break-big-ratio: 0.7;
+$break-big-ratio-font: 0.9;
+$break-large-ratio: 0.8;
+$break-large-ratio-font: 1;
+
+@media (min-width: 0px) and (max-width: $break-small - 1) {
+     body {
+        font: {
+            size: 0.9em;
+        }
+    }   
+    #media-step-4 {
+        display: block;
+    }
+}
+
+@media (min-width: $break-small) and (max-width: $break-medium - 1) {
+    $size-navigation-height: 74px;
+    
+    body {
+        font: {
+            size: 0.4em;
+        }
+        margin-top: $size-navigation-height;
+        background-color: $color-navigation;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left:0; 
+        height: auto;
+        font: {
+            size: 1.5em;
+        }
+        overflow: visible;
+        h2 {
+            display: block;
+            height: $size-navigation-height;
+            line-height: $size-navigation-height;
+            z-index: 120;
+        }
+        ul {
+            z-index: 150;
+            display: none;
+            li {
+                display: block;
+                width: 100%;
+                line-height: $size-navigation-height;
+                margin-right: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                z-index: 150;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        #nav-toggle {
+            width: $size-navigation-height;
+            height: $size-navigation-height;
+            top: auto;
+            bottom: -$size-navigation-height;
+            padding: 25px 20px;
+             span:after {
+                border-bottom: 5px solid #FFF;
+                border-top: 15px double #FFF;
+                height: 5px;
+            }
+        }         
+            #nav-toggle {
+                      display: block;
+            }        
+    }
+    header {
+        min-height: floor($size-header * $break-medium-ratio);
+        .wrapper { //required to position inside elements in center of contener
+                   h2 {
+                       font: {
+                           size: $size-header-h2;
+                       }
+                       margin-bottom: $size-header-h2/10;
+
+                   }
+                   h3 {
+                       color: $color-header-light;//#a6d6df;
+                       font: {
+                           size: $size-header-h3;
+                       }
+
+                   }
+                   .arrow {
+                       bottom: -2em;
+                       font: {
+                           size: 0.5em;
+                       }
+                   }
+        }     
+    }
+    section {
+
+        &.high {
+            width: 100%;
+            float: left;
+            height: auto;
+            overflow: hidden;
+            .block {       
+                &.block-20, &.block-30, &.block-70, &.block-80 {
+                    width: 100%;
+                    float: left;
+                }
+                
+                ul {
+                    display: block;
+                    float: left;
+                    overflow: visible;
+                    width: 100%;
+                    li {
+                        display: block;
+                        float: left;
+                        width: 100%;
+                    }
+                }
+            }
+        } 
+    }
+    main {
+        float: left;
+        clear: left;
+        padding-top: 20px;
+        p {
+            font: {
+                size: 2em;
+            }
+            line-height: 2.5em;
+            -webkit-column-count: 1; //Chrome, Safari, Opera
+            -moz-column-count: 1; //Firefox */
+            column-count: 1;
+          
+        }    
+    }
+    aside {
+        display: none;
+    }
+    #media-step-3 {
+        display: block;
+    }
+}
+
+@media (min-width: $break-medium) and (max-width: $break-big - 1) {
+     body {
+        font: {
+            size: 0.6em;
+        }
+    }
+    nav {
+        font: {
+            size: 1.3em;
+        }
+    }
+    header {
+        min-height: floor($size-header * $break-big-ratio);
+        .wrapper { //required to position inside elements in center of contener
+                   h2 {
+                       font: {
+                           size: $size-header-h2;
+                       }
+                       margin-bottom: $size-header-h2/10;
+
+                   }
+                   h3 {
+                       color: $color-header-light;//#a6d6df;
+                       font: {
+                           size: $size-header-h3;
+                       }
+
+                   }
+                   .arrow {
+                       bottom: -2em;
+                       font: {
+                           size: 0.5em;
+                       }
+                   }
+        }     
+    }
+
+    section {
+        height: floor($size-section-height * $break-big-ratio);
+        .block {
+
+            h4 {
+                line-height: $size-section-height * $break-big-ratio;
+
+            }    
+            .arrow {
+                line-height: $size-section-height * $break-big-ratio;
+            }
+        }
+        &.high {
+            height: $size-section-height-high * $break-big-ratio;
+            .block {
+                h4 {
+                    line-height: $size-section-height-high * $break-big-ratio;               
+                }
+                .arrow {
+                    line-height: $size-section-height-high * $break-big-ratio;
+                }
+            }
+        }    
+    }
+    
+    main {
+        p {
+            font: {
+                size: 2em;
+            }
+            line-height: 2.5em;
+            -webkit-column-count: 1; //Chrome, Safari, Opera
+            -moz-column-count: 1; //Firefox */
+            column-count: 1;
+          
+        }    
+    }
+    aside {
+        display: none;
+    }
+    #media-step-2 {
+        display: block;
+    }
+}
+
+@media (min-width: $break-big) and (max-width: $break-large - 1) {
+     body {
+        font: {
+            size: 0.9em;
+        }
+    }
+    nav {
+        font: {
+            size: 1.0em;
+        }
+    }
+    header {
+        min-height: floor($size-header * $break-large-ratio);
+        .wrapper { //required to position inside elements in center of contener
+                   h2 {
+                       font: {
+                           size: $size-header-h2;
+                       }
+                       margin-bottom: $size-header-h2/10;
+
+                   }
+                   h3 {
+                       color: $color-header-light;//#a6d6df;
+                       font: {
+                           size: $size-header-h3;
+                       }
+
+                   }
+                   .arrow {
+                       bottom: -2em;
+                       font: {
+                           size: 0.5em;
+                       }
+                   }
+        }     
+    }
+
+    section {
+        height: floor($size-section-height * $break-large-ratio);
+        .block {
+
+            h4 {
+                line-height: $size-section-height * $break-large-ratio;
+
+            }    
+            .arrow {
+                line-height: $size-section-height * $break-large-ratio;
+            }
+        }
+        &.high {
+            height: $size-section-height-high * $break-large-ratio;
+            .block {
+                h4 {
+                    line-height: $size-section-height-high * $break-large-ratio;               
+                }
+                .arrow {
+                    line-height: $size-section-height-high * $break-large-ratio;
+                }
+            }
+        }    
+    }
+    
+    main {
+        p {
+            font: {
+                size: 1em;
+            }
+        }    
+    }
+    #media-step-1 {
+        display: block;
+    }
+}
+
+@media (min-width: $break-large) {
+    #media-step-0 {
+        display: block;
+    }
+}

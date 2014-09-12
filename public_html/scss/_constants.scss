@@ -1,0 +1,52 @@
+/* 
+    Created on : 2014-09-11, 09:27:36
+    Author     : adam
+*/
+/* CONSTANTS */
+/* -- colors */
+$color-blue: #19b4c6;
+$color-blue-dark: adjust-color($color-blue, $lightness: -10%, $saturation: +5%); //#0ca2b8;
+$color-violet: #bc3183;
+$color-purple: #5b0fa1;
+
+$color-font: #515151;
+$color-content: #ebebeb;
+$color-navigation: #373c3f;
+$color-header-bold: #fff;
+$color-header-light: adjust-color($color-blue, $lightness: +50%);
+$color-block-h4: #a593b4;
+
+
+$color-step-small: 3%;
+$color-opacity-small: 0.1;
+
+$color-step-big: 20%;
+$color-opacity-big: 0.7;
+
+/* -- fonts */
+$font-main: "Montserrat", sans-serif;
+$font-secondary: "Quicksand", sans-serif;
+
+/* -- rwd break rules */
+$break-small: 320px;
+$break-medium: 640px;
+$break-big: 980px;
+$break-large: 1024px;
+
+/* -- sizing */
+$size-base: 1.0em;
+$size-arrow: 36pt;
+$size-navigation-height: 91px;
+$size-navigation-font: 1.1em;
+$size-header: 580px;
+$size-header-h2: 4.8em;
+$size-header-h3: 2.2em;
+
+$size-section-height: 250px;
+$size-section-height-high: 300px;
+$size-section-h3: 2em;
+
+$size-content-p: 1em;
+$size-content-p-line: 1.5em;
+$size-content-h2: 3em;
+
