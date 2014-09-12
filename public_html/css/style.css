@@ -238,8 +238,105 @@ main {
 */
 @media (min-width: 0px) and (max-width: 319px) {
   body {
-    font-size: 0.3em; } }
-@media (min-width: 0) and (max-width: 639px) {
+    font-size: 0.3em;
+    margin-top: 50px;
+    background-color: #373c3f; }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    font-size: 1.8em;
+    overflow: visible; }
+    nav h2 {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      z-index: 120; }
+    nav ul {
+      z-index: 150;
+      display: none; }
+      nav ul li {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        margin-right: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 150; }
+        nav ul li a {
+          display: block;
+          width: 100%; }
+    nav #nav-toggle {
+      width: 50px;
+      height: 50px;
+      top: auto;
+      bottom: -50px;
+      padding: 15px 10px; }
+      nav #nav-toggle span:after {
+        border-bottom: 4px solid #FFF;
+        border-top: 12px double #FFF;
+        height: 4px; }
+    nav #nav-toggle {
+      display: block; }
+
+  header {
+    min-height: 232px; }
+    header .wrapper h2 {
+      font-size: 4.8em;
+      margin-bottom: 0.48em; }
+    header .wrapper h3 {
+      color: #e3f9fb;
+      font-size: 2.2em; }
+    header .wrapper .arrow {
+      bottom: -2em;
+      font-size: 0.5em; }
+
+  section {
+    height: 110px; }
+    section .block h4 {
+      line-height: 110px;
+      font-size: 2.0em; }
+    section .block .arrow {
+      line-height: 110px; }
+    section.high {
+      width: 100%;
+      float: left;
+      height: auto;
+      overflow: hidden; }
+      section.high .block.block-20, section.high .block.block-30, section.high .block.block-70, section.high .block.block-80 {
+        width: 100%;
+        float: left; }
+      section.high .block .arrow {
+        line-height: 110px; }
+      section.high .block ul {
+        display: block;
+        float: left;
+        overflow: visible;
+        width: 100%; }
+        section.high .block ul li {
+          display: block;
+          float: left;
+          width: 100%; }
+
+  main {
+    float: left;
+    clear: left;
+    padding-top: 20px; }
+    main p {
+      font-size: 2em;
+      line-height: 2.5em;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; }
+
+  aside {
+    display: none; }
+
+  #media-step-4 {
+    display: block; } }
+@media (min-width: 320px) and (max-width: 639px) {
   body {
     font-size: 0.4em;
     margin-top: 74px;
