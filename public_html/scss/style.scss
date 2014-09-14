@@ -112,11 +112,12 @@ header {
     
     .wrapper { //required to position inside elements in center of contener
                width: 80%;
-               height: 70%;
-               overflow: auto;
-               margin: auto;
+               height: auto;
+               overflow: hidden;
+               transform: translate(-50%, -50%);
                position: absolute;
-               top: 20%; left: -10%; bottom: 0; right: 0;
+               top: 50%;
+               left: 50%;
                h2 {
                    display: inline-block;
                    position: relative;
@@ -130,6 +131,7 @@ header {
                h3 {
                    position: relative;
                    display: block;
+                   padding-bottom: 2em;
                    color: $color-header-light;//#a6d6df;
                    font: {
                        size: $size-header-h3;
@@ -161,8 +163,14 @@ section {
         text-align: center;
         height: 100%;
         overflow: hidden;
-        h4 {
-            line-height: $size-section-height;
+        position: relative;
+        h4 {      
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;            
+            width: 90%;
+            line-height: 1.8em;
             font-size: 3em;
             color: $color-block-h4;
             &:hover {

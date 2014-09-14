@@ -95,14 +95,12 @@ header {
     background: linear-gradient(90deg, #17a8b8, #0e828f); }
   header .wrapper {
     width: 80%;
-    height: 70%;
-    overflow: auto;
-    margin: auto;
+    height: auto;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
     position: absolute;
-    top: 20%;
-    left: -10%;
-    bottom: 0;
-    right: 0; }
+    top: 50%;
+    left: 50%; }
     header .wrapper h2 {
       display: inline-block;
       position: relative;
@@ -112,6 +110,7 @@ header {
     header .wrapper h3 {
       position: relative;
       display: block;
+      padding-bottom: 2em;
       color: #e3f9fb;
       font-size: 2.2em; }
     header .wrapper .arrow {
@@ -133,9 +132,15 @@ section {
     float: left;
     text-align: center;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
     section .block h4 {
-      line-height: 250px;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      line-height: 1.8em;
       font-size: 3em;
       color: #a593b4; }
       section .block h4:hover {
@@ -296,7 +301,6 @@ main {
   section {
     height: 110px; }
     section .block h4 {
-      line-height: 110px;
       font-size: 2.0em; }
     section .block .arrow {
       line-height: 110px; }
@@ -448,8 +452,6 @@ main {
 
   section {
     height: 175px; }
-    section .block h4 {
-      line-height: 175px; }
     section .block .arrow {
       line-height: 175px; }
     section.high {
@@ -492,14 +494,10 @@ main {
 
   section {
     height: 200px; }
-    section .block h4 {
-      line-height: 200px; }
     section .block .arrow {
       line-height: 200px; }
     section.high {
       height: 240px; }
-      section.high .block h4 {
-        line-height: 240px; }
       section.high .block .arrow {
         line-height: 240px; }
 

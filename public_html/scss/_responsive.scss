@@ -97,9 +97,7 @@ $break-large-ratio-font: 1;
         $size-section-height: 110px;
         height: $size-section-height;
         .block {
-            //height: $size-section-height;
             h4 {
-                line-height: $size-section-height; //$size-section-height;
                 font-size: 2.0em;
             }                
             .arrow {
@@ -329,11 +327,6 @@ $break-large-ratio-font: 1;
     section {
         height: floor($size-section-height * $break-big-ratio);
         .block {
-
-            h4 {
-                line-height: $size-section-height * $break-big-ratio;
-
-            }    
             .arrow {
                 line-height: $size-section-height * $break-big-ratio;
             }
@@ -410,12 +403,7 @@ $break-large-ratio-font: 1;
 
     section {
         height: floor($size-section-height * $break-large-ratio);
-        .block {
-
-            h4 {
-                line-height: $size-section-height * $break-large-ratio;
-
-            }    
+        .block {   
             .arrow {
                 line-height: $size-section-height * $break-large-ratio;
             }
@@ -423,9 +411,6 @@ $break-large-ratio-font: 1;
         &.high {
             height: $size-section-height-high * $break-large-ratio;
             .block {
-                h4 {
-                    line-height: $size-section-height-high * $break-large-ratio;               
-                }
                 .arrow {
                     line-height: $size-section-height-high * $break-large-ratio;
                 }
